@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    {{! Document Settings }}
+	    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		{{! Page Meta }}
+		<title>{{meta_title}}</title>
+    	<meta name="description" content="{{meta_description}}">
+
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		{{! Stylesheet }}
+		<link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+
+		{{! Google Fonts }}
+		<link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" rel="stylesheet" type="text/css">
+
+		{{! Font Awesome}}
+		<link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
+		<!--[if IE 7]>
+		<link rel="stylesheet" href="/assets/font-awesome/css/font-awesome-ie7.min.css">
+		<![endif]-->
+
+		{{! HTML Shiv}}
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		{{! Ghost head hook }}
+	    {{ghost_head}}
+	    
+	</head>
+	<body class="{{body_class}}">
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=151710898255033";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		<div id="wrapper">
+
+		{{! Body hook for template output}}
+		{{{body}}}
+
+		</div>
+
+		{{! Ghost footer hook }}
+	    {{ghost_foot}}
+
+	    {{! mots. Scripts and Plugins}}
+	    <script src="/assets/js/plugins.min.js"></script>
+	    <script src="/assets/js/mots.js"></script>
+
+
+	<!-- 	<script>
+		$("#header").headroom({
+		  "tolerance": 0,
+		  "offset": 20,
+		  "classes": {
+	    	"initial": "animated",
+	   		"pinned": "bounceInDown",
+   		 	"unpinned": "bounceOutUp"
+		  }
+		});
+		</script> -->
+	    
+	    <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-42413400-1', 'sideproject.io');
+		  ga('send', 'pageview');
+  		</script>
+	    
+	</body>
+</html>

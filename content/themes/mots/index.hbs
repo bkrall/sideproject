@@ -1,0 +1,29 @@
+{{!< default}}
+{{! The above will include this template into the body of the default template }}
+
+{{> sidebar}}
+
+<main id="content" role="main">
+	<div class="inner list-posts">
+
+		{{! Each post will be output using this markup }}
+    	{{#foreach posts}}
+
+		<article class="{{post_class}}">
+			<header class="post-header">
+				<h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+				<span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span>
+			</header>
+			<section class="post-excerpt">
+				<p>{{excerpt}}&hellip; <a href="{{url}}" title="{{title}}">Continue reading</a></p>
+			</section>
+		</article>
+
+		{{/foreach}}
+
+		{{!! After all the posts, we have the previous/next pagination links }}
+    	{{pagination}}
+
+		{{> footer}}
+	</div>
+</main>

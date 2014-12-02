@@ -1,0 +1,20 @@
+<aside id="sidebar" role="complementary" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+	<div class="blog-logo">
+		{{#if @blog.logo}}
+		<a href="{{@blog.url}}" title="{{@blog.title}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+		{{else}}
+		<a href="{{@blog.url}}" title="{{@blog.title}}">{{@blog.title}}</a>
+		{{/if}}
+	</div>
+
+	<div class="blog-description"><p>{{@blog.description}}</p></div>
+
+	<div class="blog-social">
+		<ul class="clearfix">
+			<li>
+			<a href="https://twitter.com/bkrall" class="twitter-follow-button" data-show-count="false" data-size="large" data-lang="en">Follow</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+		</ul>
+	</div>
+	
+</aside>
